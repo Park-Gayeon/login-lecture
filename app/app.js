@@ -4,10 +4,10 @@ const express = require("express");
 const app = express(); //app이라는 변수에 express를 넣는다
 const PORT = 3000; //포트번호를 변수명으로 처리하는게 좋은 코딩
 //라우팅
-const home = require("./routes/home");//home을 명시해줌
+const home = require("./src/routes/home");//home을 명시해줌
 
 //앱 세팅
-app.set("views", "./views");
+app.set("views", "./src/views");
 app.set("view engine", "ejs"); //view engine을 ejs로
 
 //index.js에서 사용가능하게 던져준 것들을 받아온다
