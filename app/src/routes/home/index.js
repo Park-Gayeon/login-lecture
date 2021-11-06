@@ -13,6 +13,8 @@ router.get("/login", ctrl.output.login)
 //라우트의 기능을 하는 것들을 몽땅 가지고 옴
 //app.js는 아직 index.js를 알지 못하기 때문에 외부에서 사용할수 있도록 던져주어야함
 router.get("/register", ctrl.output.register);
+
 router.post("/login", ctrl.process.login)
+router.post("/register", ctrl.process.register);
 
 module.exports = router;
