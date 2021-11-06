@@ -12,7 +12,9 @@ const output = {
     login : (req, res) => {
         res.render("home/login");
     },//로그인 경로로 들어가면 그 클라이언트(페이지)에 서버가 전송하는 값을 받음
-    
+    register : (req, res) => {
+        res.render("home/register");
+    }
 };
 
 const process = {

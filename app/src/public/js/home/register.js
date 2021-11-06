@@ -2,17 +2,22 @@
 
 //dom => 일종의 인터페이스 객체 html 존재하는 데이터들을 가져와서 제어할 수 있음
 const id = document.querySelector("#id"),
+name = document.querySelector("#name"),
 psword = document.querySelector("#psword"),
-loginBtn = document.querySelector("#btn");
+confirmPsword = document.querySelector("#confirm-psword"),
+registerBtn = document.querySelector("#btn");
 
-loginBtn.addEventListener("click", login);
+registerBtn.addEventListener("click", register);
 
-function login(){
+function register(){
     const req = {
         id : id.value,
+        name : name.value,
         psword : psword.value,
+        confirmPsword : confirmPsword.value
     };
-    fetch("/login", {
+
+    fetch("/register", {
         method: "POST",
         headers:{
             "content-Type":"application/json"
@@ -22,12 +27,12 @@ function login(){
     .then((res) => res.json())
     .then((res) => {
         if(res.success){
-            location.href = "/";
+            location.href = "/login";
         }else{
             alert(res.msg);
         }
     })
     .catch((err)=>{
-        console.error(new Error("로그인 중 에러 발생"));
+        console.error(new Error("회원가입 중 에러 발생"));
     });
 };
