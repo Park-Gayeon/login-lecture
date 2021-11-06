@@ -7,7 +7,7 @@ const router = express.Router();
 //home.ctrl에서 보내준 모듈 받아오기 위해 선언
 const ctrl = require("./home.ctrl")
 
-router.get("/", ctrl.hello);//루트 경로를 만드는 것. 파라미터로 콜백함수를 넣어줌
+router.get("/", ctrl.home);//루트 경로를 만드는 것. 파라미터로 콜백함수를 넣어줌
 
 router.get("/login", ctrl.login)
 //라우트의 기능을 하는 것들을 몽땅 가지고 옴
