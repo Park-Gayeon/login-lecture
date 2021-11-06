@@ -12,4 +12,5 @@ router.get("/", ctrl.home);//루트 경로를 만드는 것. 파라미터로 콜
 router.get("/login", ctrl.login)
 //라우트의 기능을 하는 것들을 몽땅 가지고 옴
 //app.js는 아직 index.js를 알지 못하기 때문에 외부에서 사용할수 있도록 던져주어야함
+
 module.exports = router;
